@@ -1,14 +1,14 @@
 
 const NavBar = () => {
   return (
-    <section>
+    <nav className="navBar">
       <ul> 
-        <li>About Me</li>
-        <li>Skills</li>
-        <li>Projects</li>
-        <li>Contact Me</li>
+        <li><a href="#sectionAboutMe">About Me</a></li>
+        <li><a href="#sectionSkills">Skills</a></li>
+        <li><a href="#sectionProjects">Projects</a></li>
+        <li><a href="#sectionContactMe">Contact Me</a></li>
       </ul>
-    </section>
+    </nav>
   )
 }
 

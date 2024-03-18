@@ -1,7 +1,11 @@
-import NavBar from "./NavBar"
-import AboutMe from "./AboutMe"
-import SkillSection from "./SkillsSection"
-import ContactMe from "./ContactMe"
+import NavBar from "./NavBar";
+import AboutMe from "./AboutMe";
+import SkillSection from "./SkillsSection";
+import Project from "./Project";
+import ContactMe from "./ContactMe";
+
+// Special Import
+import Starfield from "./Starfield";
 
 const App = () => {
   return (
@@ -9,7 +13,9 @@ const App = () => {
       <NavBar />
       <AboutMe />
       <SkillSection />
+      <Project />
       <ContactMe />
+      <Starfield />
     </>
   )
 }

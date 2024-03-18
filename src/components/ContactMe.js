@@ -1,7 +1,7 @@
 
 const ContactMe = () => {
   return (
-    <footer>
+    <footer id="sectionContactMe">
       <p>This is the Contact Me footer.</p>
     </footer>
   )

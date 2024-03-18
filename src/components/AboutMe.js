@@ -1,8 +1,9 @@
 
 const AboutMe = () => {
   return (
-    <section>
-      <p>This is the About Me section.</p>
+    <section id="sectionAboutMe">
+      <p>Little info about me!</p>
+      <p>Currently a student in a Bootcamp to become a Full-Stack developer.</p>
     </section>
   )
 }

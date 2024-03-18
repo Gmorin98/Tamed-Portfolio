@@ -1,0 +1,76 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* GENERAL CSS */
+body {
+  color: white;
+  font-family: 'Space Mono';
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* SPECIFIC CSS */
+
+/* 
+-- Navigation Bar -- 
+*/
+.navBar > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navBar > ul > li {
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+/* 
+-- Skills Section -- 
+*/
+.skillsSection {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+}
+
+/* 
+-- Stars CSS -- 
+*/
+.starfield {
+  position: fixed;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkling 6s infinite;
+  opacity: 1;
+  box-shadow: 0 0 10px 1px #fff; /* Blurry effect */
+}
+
+@keyframes twinkling {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
