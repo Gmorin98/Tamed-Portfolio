@@ -1,6 +1,6 @@
 
 const Starfield = () => {
-  const numStars = Math.floor(Math.random() * 100 + 100); // Adjust the number of stars as needed
+  const numStars = Math.floor(Math.random() * 100 + 100); // Random number of stars from 100 to 200
   const stars = [];
 
   for (let i = 0; i < numStars; i++) {
@@ -9,7 +9,7 @@ const Starfield = () => {
 
     // Making the random Color.
     for(let RGB = 0; RGB <= 2; RGB++) {
-      randomRGB[RGB] = Math.floor(Math.random() * 100 + 155);
+      randomRGB[RGB] = Math.floor(Math.random() * 100 + 155); // Values only 155 and up.
     }
 
     const style = {
@@ -18,7 +18,7 @@ const Starfield = () => {
       width: `${size}px`,
       height: `${size}px`,
       backgroundColor: `rgb(${randomRGB[0]}, ${randomRGB[1]}, ${randomRGB[2]})`,
-      animationDelay: `${Math.random() * 5}s` // Delay their animation from 0s to 3s.
+      animationDelay: `${Math.random() * 5}s` // Delay their animation from 0s to 5s.
     };
     
     stars.push(<div className="star" style={style} key={i}></div>);

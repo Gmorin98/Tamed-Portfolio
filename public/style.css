@@ -16,11 +16,21 @@ li {
 }
 
 a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 /* SPECIFIC CSS */
+.sectionAboutMe,
+.sectionSkills,
+.sectionProjects,
+.sectionContactMe,
+.blackHole {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5em;
+}
+
 
 /* 
 -- Navigation Bar -- 
@@ -28,25 +38,187 @@ a {
 .navBar > ul {
   display: flex;
   justify-content: space-evenly;
-}
-
-.navBar > ul > li {
-  display: inline-block;
   font-size: 1.5em;
 }
+
+.navBar > ul > li > a:hover {
+  animation: navGlow 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes navGlow {
+  0%, 100% {
+    text-shadow: 0px 0px 0px white;
+  }
+  50% {
+    text-shadow: 0px 0px 20px white;
+  }
+}
+
+/* Small Responsive Menu */
+@media screen and (max-width: 950px) {
+  .navBar > ul {
+    font-size: 1em;
+  }
+}
+
+
+/*
+-- About Me Section --
+*/
+.sectionAboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+
 
 /* 
 -- Skills Section -- 
 */
-.skillsSection {
+.sectionSkills {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   width: 80%;
+  height: 30vh;
+}
+
+.sectionSkills > h3 {
   margin: auto;
 }
 
+.skillsContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.skillsContainer > div {
+  display: flex;
+  align-items: center;
+}
+
+.skillsContainer > div > img {
+  padding-right: 5px;
+}
+
+
+/*
+-- Project Section
+*/
+.sectionProjects {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionProjects > h3 {
+  margin: auto;
+  margin-bottom: 2em;
+}
+
+.sectionProjects > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin: auto;
+  border: solid white 1px;
+  border-radius: 10%;
+}
+
+.sectionProjects > div > p:last-of-type {
+  width: 80%;
+}
+
+/* Small Responsive Project */
+@media screen and (max-width: 950px) {
+  .sectionProjects {
+    flex-wrap: wrap;
+  }
+
+  .sectionProjects > div > img {
+    height: auto;
+    width: 50%;
+  }
+  
+  .sectionProjects > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: solid white 1px;
+    border-radius: 10%;
+  }
+}
+
+
+/*
+-- Contact Me Section --
+*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.sectionContactMe > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionContactMe > h3 {
+  text-align: center;
+}
+
+.sectionContactMe > form> label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sectionContactMe > form > input,
+.sectionContactMe > form > textarea {
+  background-color: black;
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.sectionContactMe > form > input:focus,
+.sectionContactMe > form > textarea:focus {
+  box-shadow: 0px 0px 10px 5px white;
+}
+
+.sectionContactMe > form > button {
+  margin: auto;
+  border: solid 1px white;
+  border-radius: 10%;
+  color: white;
+  background-color: black;
+}
+
+.sectionContactMe > form > button:hover {
+  animation: buttonLightUp 3s infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+@keyframes buttonLightUp {
+  100% {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 5px white;
+  }
+}
+
 /* 
--- Stars CSS -- 
+-- Starsfield / Stars -- 
 */
 .starfield {
   position: fixed;
@@ -74,3 +246,21 @@ a {
     opacity: 0.25;
   }
 }
+
+/*
+-- Black Hole --
+*/
+
+.blackHoleCanvas {
+  z-index: -1;
+}
+
+/* 
+.blackHole {
+  position: absolute;
+  top: -100px;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: white;
+} */

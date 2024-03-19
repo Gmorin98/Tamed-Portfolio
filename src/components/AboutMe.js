@@ -1,9 +1,12 @@
 
 const AboutMe = () => {
   return (
-    <section id="sectionAboutMe">
-      <p>Little info about me!</p>
-      <p>Currently a student in a Bootcamp to become a Full-Stack developer.</p>
+    <section className="sectionAboutMe" id="sectionAboutMe">
+      <h3>Little info about me!</h3>
+      <p>
+        Hi, my name is Gabriel.<br/> 
+        I'm currently a student in a bootcamp to become a Full-Stack developer.
+      </p>
     </section>
   )
 }
